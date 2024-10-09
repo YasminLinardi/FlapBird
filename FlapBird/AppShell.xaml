@@ -7,9 +7,10 @@
     Shell.FlyoutBehavior="Disabled"
     Title="FlapBird">
 
-    <ShellContent
+     <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
+
 
 </Shell>
