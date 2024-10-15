@@ -5,36 +5,55 @@
 
     <Grid>
 
-            <Image Source="fundo.png"
+            <Image x:Name="Fundo" 
+                Source="fundo.png"
                 HorizontalOptions="Fill"
                 VerticalOptions="Fill"/>
 
-            <Image Source="bicho.png"
+            <Image x:Name="Slime" 
+                Source="bicho.png"
                 HeightRequest="60"
                 WidthRequest="60"
                 HorizontalOptions="Start"/>
 
-            <Image Source="canocima.png"
+            <Image x:Name="CanoC" 
+                Source="canocima.png"
                 HeightRequest="300"
                 WidthRequest="100"
                 HorizontalOptions="End"
                 VerticalOptions="Start"/>
 
-            <Image Source="canobaixo.png"
+            <Image x:Name="CanoB" 
+                Source="canobaixo.png"
                 HeightRequest="300"
                 WidthRequest="100"
                 HorizontalOptions="End"
                 VerticalOptions="End"/>
             
-            <Image Source="chao.png"
+            <Image x:Name="Chão" 
+                Source="chao.png"
                 WidthRequest="500"
                 HorizontalOptions="Fill"
                 VerticalOptions="End"/>
-            
+
+            <Frame x:Name="frameGameOver"
+                HorizontalOptions="Fill"
+                VerticalOptions="Fill"
+                BackgroundColor="#77000000">
 
 
+            <Frame.GestureRecognizers>
 
+            <TapGestureRecognizer   
+                Tapped="OnGameOverClicked"/>
+
+            </Frame.GestureRecognizers>
+            <Image Source="gameover.png"/>
+
+            </Frame>
+
+            <Grid.GestureRecognizers>
+            <TapGestureRecognizer Tapped ="OnGridClicked"/>
+            </Grid.GestureRecognizers>
     </Grid>
-
-
 </ContentPage>
