@@ -7,6 +7,7 @@ public partial class MainPage : ContentPage
     const int tempoEntreFrames = 25;
 	const int maxTempoPulando = 3;
 	const int forcaPulo = 60;
+	const int aberturaMinima = 200;
     bool morto = true;
 	double larguraJanela = 0;
     double alturaJanela = 0;
@@ -102,6 +103,10 @@ public partial class MainPage : ContentPage
                 	{
                         CanoB.TranslationX=0;
                         CanoB.TranslationX=0;
+				var alturaMax = -100;
+				var alturaMin = -CanoB.HeightRequest;
+				CanoC.TranslationY = Random.Shared.Next((int)alturaMin, (int)alturaMax);
+				CanoB.TranslationY = CanoC.TranslationY + aberturaMinima + CanoB.HeightRequest;
                 	}
         }
     void Inicializar()

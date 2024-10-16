@@ -4,6 +4,9 @@
              x:Class="FlapBird.MainPage">
 
     <Grid>
+            <Grid.GestureRecognizers>
+            <TapGestureRecognizer Tapped ="OnGridClicked"/>
+            </Grid.GestureRecognizers>
 
             <Image x:Name="Fundo" 
                 Source="fundo.png"
@@ -46,14 +49,9 @@
 
             <TapGestureRecognizer   
                 Tapped="OnGameOverClicked"/>
-
             </Frame.GestureRecognizers>
             <Image Source="gameover.png"/>
 
             </Frame>
-
-            <Grid.GestureRecognizers>
-            <TapGestureRecognizer Tapped ="OnGridClicked"/>
-            </Grid.GestureRecognizers>
     </Grid>
 </ContentPage>
