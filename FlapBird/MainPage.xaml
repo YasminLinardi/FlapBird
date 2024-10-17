@@ -10,8 +10,14 @@
 
             <Image x:Name="Fundo" 
                 Source="fundo.png"
+                Aspect="AspectFill"
                 HorizontalOptions="Fill"
                 VerticalOptions="Fill"/>
+
+            <Label x:Name ="labelScore"
+                FontFamily="Retrograde"
+                Margin="10"/>
+
 
             <Image x:Name="Slime" 
                 Source="bicho.png"

@@ -8,7 +8,7 @@
     Title="FlapBird">
 
      <ShellContent
-        Title="Home"
+        Title="FlapBird"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 

@@ -13,6 +13,7 @@ public partial class MainPage : ContentPage
     double alturaJanela = 0;
     int velocidade = 20;
 	int tempoPulando = 0;
+	int score = 0;
 	bool estaPulando = false;
 	
 
@@ -107,6 +108,8 @@ public partial class MainPage : ContentPage
 				var alturaMin = -CanoB.HeightRequest;
 				CanoC.TranslationY = Random.Shared.Next((int)alturaMin, (int)alturaMax);
 				CanoB.TranslationY = CanoC.TranslationY + aberturaMinima + CanoB.HeightRequest;
+				score++;
+				labelScore.Text="Canos:" + score.ToString("D3");
                 	}
         }
     void Inicializar()
