@@ -4,60 +4,66 @@
              x:Class="FlapBird.MainPage">
 
     <Grid>
-            <Grid.GestureRecognizers>
-            <TapGestureRecognizer Tapped ="OnGridClicked"/>
-            </Grid.GestureRecognizers>
+        <Grid.GestureRecognizers>
+            <TapGestureRecognizer Tapped="OnGridClicked"/>
+        </Grid.GestureRecognizers>
 
-            <Image x:Name="Fundo" 
-                Source="fundo.png"
-                Aspect="AspectFill"
-                HorizontalOptions="Fill"
-                VerticalOptions="Fill"/>
+        <Image x:Name="Fundo"
+               Source="fundo.png"
+               Aspect="AspectFill"
+               HorizontalOptions="Fill"
+               VerticalOptions="Fill"/>
 
-            <Label x:Name ="labelScore"
-                FontFamily="Retrograde"
-                Margin="10"/>
+        <Label x:Name="labelScore"
+               FontFamily="Retrograde"
+               Margin="10"/>
 
 
-            <Image x:Name="Slime" 
-                Source="bicho.png"
-                HeightRequest="60"
-                WidthRequest="60"
-                HorizontalOptions="Start"/>
+        <Image x:Name="Slime"
+               Source="bicho.png"
+               HeightRequest="60"
+               BackgroundColor="blue"
+               WidthRequest="60"
+               HorizontalOptions="Center"/>
 
-            <Image x:Name="CanoC" 
-                Source="canocima.png"
-                HeightRequest="300"
-                WidthRequest="100"
-                HorizontalOptions="End"
-                VerticalOptions="Start"/>
+        <Image x:Name="CanoC"
+               Source="canocima.png"
+               Aspect ="AspectFit"
+               HeightRequest="200"
+               BackgroundColor="blue"
+               WidthRequest="50"
+               HorizontalOptions="End"
+               VerticalOptions="Start"/>
 
-            <Image x:Name="CanoB" 
-                Source="canobaixo.png"
-                HeightRequest="300"
-                WidthRequest="100"
-                HorizontalOptions="End"
-                VerticalOptions="End"/>
-            
-            <Image x:Name="Chão" 
-                Source="chao.png"
-                WidthRequest="500"
-                HorizontalOptions="Fill"
-                VerticalOptions="End"/>
+        <Image x:Name="CanoB"
+               Source="canobaixo.png"
+               Aspect ="AspectFit"
+               HeightRequest="300"
+               BackgroundColor="blue"
+               WidthRequest="50"
+               HorizontalOptions="End"
+               VerticalOptions="End"/>
 
-            <Frame x:Name="frameGameOver"
-                HorizontalOptions="Fill"
-                VerticalOptions="Fill"
-                BackgroundColor="#77000000">
+        <Image x:Name="Chão"
+               Source="chao.png"
+               WidthRequest="500"
+               HorizontalOptions="Fill"
+               VerticalOptions="End"/>
+
+        <Frame x:Name="frameGameOver"
+               HorizontalOptions="Fill"
+               VerticalOptions="Fill"
+               BackgroundColor="#77000000">
 
 
             <Frame.GestureRecognizers>
 
-            <TapGestureRecognizer   
-                Tapped="OnGameOverClicked"/>
+                <TapGestureRecognizer
+                    Tapped="OnGameOverClicked"/>
             </Frame.GestureRecognizers>
             <Image Source="gameover.png"/>
 
-            </Frame>
+
+        </Frame>
     </Grid>
 </ContentPage>
