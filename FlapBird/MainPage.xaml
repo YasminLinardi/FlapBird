@@ -1,69 +1,93 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FlapBird.MainPage">
+             x:Class="FlapBird.MainPage"
+             Shell.NavBarIsVisible="False"
+             Padding="0"
+             BackgroundColor="White">
 
-    <Grid>
-        <Grid.GestureRecognizers>
-            <TapGestureRecognizer Tapped="OnGridClicked"/>
-        </Grid.GestureRecognizers>
+       <Grid Margin="0"
+             Padding="0">
 
-        <Image x:Name="Fundo"
-               Source="fundo.png"
-               Aspect="AspectFill"
-               HorizontalOptions="Fill"
-               VerticalOptions="Fill"/>
+              <Grid.GestureRecognizers>
+                     <TapGestureRecognizer Tapped="OnGridClicked"/>
+              </Grid.GestureRecognizers>
 
-        <Label x:Name="labelScore"
-               FontFamily="Retrograde"
-               Margin="10"/>
+              <Image x:Name="Fundo"
+                     Source="fundo.png"
+                     Aspect="AspectFill"
+                     Margin="0"
+                     HorizontalOptions="Fill"
+                     VerticalOptions="Fill"/>
 
+              <Image x:Name="Slime"
+                     Source="bicho.png"
+                     Aspect="AspectFit"
+                     Margin="20,0,0,0"
+                     HeightRequest="50"
+                     WidthRequest="50"
+                     HorizontalOptions="Start"
+                     VerticalOptions="Center"/>
 
-        <Image x:Name="Slime"
-               Source="bicho.png"
-               HeightRequest="60"
-               BackgroundColor="blue"
-               WidthRequest="60"
-               HorizontalOptions="Center"/>
+              <Image x:Name="CanoC"
+                     Source="canocima.png"
+                     Margin="0, 0, 0, 0"
+                     Aspect="Fill"
+                     HeightRequest="620"
+                     WidthRequest="50"
+                     HorizontalOptions="End"
+                     VerticalOptions="Start"/>
 
-        <Image x:Name="CanoC"
-               Source="canocima.png"
-               Aspect ="AspectFit"
-               HeightRequest="200"
-               BackgroundColor="blue"
-               WidthRequest="50"
-               HorizontalOptions="End"
-               VerticalOptions="Start"/>
-
-        <Image x:Name="CanoB"
-               Source="canobaixo.png"
-               Aspect ="AspectFit"
-               HeightRequest="300"
-               BackgroundColor="blue"
-               WidthRequest="50"
-               HorizontalOptions="End"
-               VerticalOptions="End"/>
-
-        <Image x:Name="Chão"
-               Source="chao.png"
-               WidthRequest="500"
-               HorizontalOptions="Fill"
-               VerticalOptions="End"/>
-
-        <Frame x:Name="frameGameOver"
-               HorizontalOptions="Fill"
-               VerticalOptions="Fill"
-               BackgroundColor="#77000000">
+              <Image x:Name="CanoB"
+                     Source="canobaixo.png"
+                     Margin="0,0,0,20"
+                     Aspect="Fill"
+                     HeightRequest="620"
+                     WidthRequest="50"
+                     HorizontalOptions="End"
+                     VerticalOptions="Start"/>
 
 
-            <Frame.GestureRecognizers>
+              <Label x:Name="labelScore"
+                     Text="Score: 00000"
+                     FontSize="30"
+                     Margin="0,20,20,0"
+                     FontFamily="Retrograde"
+                     VerticalOptions="Start"
+                     HorizontalOptions="End"/>
 
-                <TapGestureRecognizer
-                    Tapped="OnGameOverClicked"/>
-            </Frame.GestureRecognizers>
-            <Image Source="gameover.png"/>
+
+              <Image x:Name="Chao"
+                     Source="chao.png"
+                     Margin="0"
+                     HeightRequest="150"
+                     Aspect="AspectFill"
+                     HorizontalOptions="Fill"
+                     VerticalOptions="End"/>
+
+              <Frame x:Name="frameGameOver"
+                     HorizontalOptions="Fill"
+                     VerticalOptions="Fill"
+                     BackgroundColor="#77000000">
 
 
-        </Frame>
-    </Grid>
+                     <Frame.GestureRecognizers>
+                            <TapGestureRecognizer
+                                   Tapped="OnFrameClicked"/>
+                     </Frame.GestureRecognizers>
+                     <VerticalStackLayout
+                            VerticalOptions="Center">
+                            <Label x:Name="labelGameOver"
+                                   Text="Score: 00000"
+                                   FontSize="30"
+                                   Margin="0,20,20,0"
+                                   FontFamily="Retrograde"
+                                   VerticalOptions="Start"
+                                   HorizontalOptions="Center"
+                                   HorizontalTextAlignment="Center"/>
+                     </VerticalStackLayout>
+
+
+              </Frame>
+       </Grid>
 </ContentPage>
