@@ -64,6 +64,7 @@ public partial class MainPage : ContentPage
 			if (VerificaColisao())
 			{
 				morto = true;
+				SoundHelper.Play("morto.wav");
 				labelGameOver.Text = "Você passou por\n" + score + " canos";
 				frameGameOver.IsVisible = true;
 				break;
