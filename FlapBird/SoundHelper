@@ -1,7 +1,4 @@
-namespace FlapBird
-{
-    
-}
+namespace FlapBird;
 
 using Plugin.Maui.Audio;
 
