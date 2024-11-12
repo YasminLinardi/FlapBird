@@ -140,7 +140,7 @@ public partial class MainPage : ContentPage
 			canoB.TranslationY=canoC.TranslationY+aberturaMinima+canoB.HeightRequest;
 			labelscore.Text="Canos: "+score.ToString("D3");
 			score++;
-		//	SoundHelper.Play("pontuacao.wav");
+			SoundHelper.Play("pontuacao.wav");
 			if(score % 2==0)
 			velocidade++;
 			
@@ -148,8 +148,8 @@ public partial class MainPage : ContentPage
 	}
 	void Inicializar()
 	{
-	//	SoundHelper.Play("comeco.wav");
-	//	SoundHelper.Play("fundo.wav");
+		SoundHelper.Play("comeco.wav");
+		SoundHelper.Play("fundo.wav");
 		canoC.TranslationX=-larguraJanela;
 		canoB.TranslationX=-larguraJanela;
 		slime.TranslationX=0;

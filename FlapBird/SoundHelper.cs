@@ -4,7 +4,7 @@ using Plugin.Maui.Audio;
 
 public class SoundHelper
 {
-  //------------------------------------------------------------------------
+  
 
   public static void Play(string nomeArquivoWav, bool loop = false)
   {
@@ -17,6 +17,5 @@ public class SoundHelper
     });
   }
 
-  //------------------------------------------------------------------------
 
 }           
